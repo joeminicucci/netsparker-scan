@@ -140,12 +140,6 @@ def pollRunningScan(scanId, url, userId, passwordToken, pollInterval, sevThresho
 	return pollRunningScan(scanId, url, userId, passwordToken, pollInterval, sevThreshold)
 
 def handleErrorThresholds(getRunningScanPayload, sevThreshold):
-	# "VulnerabilityCriticalCount": 0,
-	#  "VulnerabilityHighCount": 0,
-	#  "VulnerabilityInfoCount": 0,
-	#  "VulnerabilityLowCount": 0,
-	#  "VulnerabilityMediumCount": 0,
-
 	if sevThreshold is 0 and (getRunningScanPayload['VulnerabilityInfoCount'] > 0
 							  or getRunningScanPayload['VulnerabilityLowCount'] > 0
 							  or getRunningScanPayload['VulnerabilityMediumCount'] > 0
